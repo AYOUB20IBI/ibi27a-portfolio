@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --bg-color:#0a0a0a;
+    --text-color:#fff;
+    --main-color:#f92f26;
+
+    --big-font:4rem;
+    --p-font:1.1rem
+}
+.home-skils{
+    width: 200%;
+    position: relative;
+    z-index: 200;
+    border-left: 2px solid #fff;
+    padding: 20px;
+}
+.home-skils h1{
+    color: var(--text-color);
+    border-bottom: 5px solid #fff;
+    width: 130px;
+    font-size: 3rem;
+}
+.home-skils h1:hover{
+    cursor: pointer;
+    color: #f92f26;
+}
+
+
+.title-skills{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #f92f26;
+}
+
+.home-skils ul li{
+    margin: 20px;
+}
+.home-skils a{
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0 10px;
+    font-size: 50px;
+    transition: all ease .50s;
+}
+
+.home-skils a:hover{
+    color: #f92f26;
+    cursor: pointer;
+}
+
+
+@media (max-width:950px){
+    .home-skils{
+        width: 85%;
+    }
+}

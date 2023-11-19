@@ -1,0 +1,38 @@
+https://www.emailjs.com/
+
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+    <script  type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("oPFC3k0ZEj7O6ahjC");
+        })();
+    </script>
+
+    <h1>Let's <span>connect</span></h1>
+            <div class="form">
+                <div class="form-input">
+                    <input type="text" name="fullname" id="fullname" placeholder="Full Name">
+                    <input type="email" name="email" id="email_id" placeholder="Email">
+                </div>
+                <textarea name="msg" id="message" cols="30" rows="10" placeholder="Your Message Here..."></textarea>
+                <button onclick="SendMail()">
+                    <p>Send</p>
+                </button>
+            </div>
+            <script>
+                function SendMail() {
+        
+                    var params = {
+                        from_name: document.getElementById('fullname').value,
+                        email_id: document.getElementById('email_id').value,
+                        message: document.getElementById('message').value,
+                    };
+
+                    emailjs.send("service_0wmq8uw","template_kv6cnbq",params).then(function(res){
+                        alert('Success'+res.status)
+                    })
+                }
+            </script>

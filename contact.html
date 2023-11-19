@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBIDARNE ayoub | Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-contact.css">
+    <link rel="icon" href="img/lolgoicon.png">
+    <!--boxicons-->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!---google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script  type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("oPFC3k0ZEj7O6ahjC");
+        })();
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <!--header section-->
+    <header>
+        <a href="index.html" class="logo">IBIDARNE <span>ayoub.</span></a>
+
+        <ul class="navbar">
+            <li><a href="404.html"><i class='bx bxl-linkedin'></i></a></li>
+            <li><a href="404.html"><i class='bx bxl-facebook'></i></a></li>
+            <li><a href="contact.html"><i class='bx bx-envelope'></i></a></li>
+            <li><a href="https://github.com/AYOUB20IBI"><i class='bx bxl-github'></i></a></li>
+            <li><a href="https://www.behance.net/ayoubibidarne"><i class='bx bxl-behance' ></i></a></li>
+        </ul>
+        <ul class="navbar2">
+            <li><a href="index.html"><i class='bx bxs-home'></i> Home</a></li>
+            <li><a href="about.html"><i class='bx bxs-user'></i> About</a></li>
+            <li><a href="Services.html"><i class='bx bxs-grid-alt'></i> Services</a></li>
+            <li><a href="works.html"><i class='bx bx-library'></i> Work</a></li>
+            <li><a href="contact.html"><i class='bx bxs-envelope'></i> Contacts</a></li>
+            <div class="navbar-icons">
+                <li><a href="404.html"><i class='bx bxl-linkedin'></i></a></li>
+                <li><a href="404.html"><i class='bx bxl-facebook'></i></a></li>
+                <li><a href="contact.html"><i class='bx bx-envelope'></i></a></li>
+                <li><a href="https://github.com/AYOUB20IBI"><i class='bx bxl-github'></i></a></li>
+                <li><a href="https://www.behance.net/ayoubibidarne"><i class='bx bxl-behance' ></i></a></li>
+            </div>
+        </ul>
+
+        <div class="menu-btn">
+            <span>INTRO</span>
+            <div class="bx bx-menu " id="menu-icon"></div>
+        </div>
+    </header>
+
+    <!--home section-->
+    <section class="home">
+        <div class="container">
+            <h1>Let's <span>connect</span></h1>
+            <div class="form">
+                <div class="form-input">
+                    <input type="text" name="fullname" id="fullname" placeholder="Full Name">
+                    <input type="email" name="email" id="email_id" placeholder="Email">
+                </div>
+                <textarea name="msg" id="message" cols="30" rows="10" placeholder="Your Message Here..."></textarea>
+                <button class="button" onclick="SendMail()">
+                    Send
+                </button>
+            </div>
+            <script>
+                function SendMail() {
+        
+                    var params = {
+                        from_name: document.getElementById('fullname').value,
+                        email_id: document.getElementById('email_id').value,
+                        message: document.getElementById('message').value,
+                    };
+
+                    emailjs.send("service_0wmq8uw","template_kv6cnbq",params).then(function(res){
+                        swal("Good job!", "You clicked the button!", "success");
+                        document.getElementById('fullname').value="";
+                        document.getElementById('email_id').value="";
+                        document.getElementById('message').value="";
+                    })
+                }
+            </script>
+        </div>
+        
+        <ul class="menu-left">
+            <li><a href="index.html" id="active"><i class='bx bxs-home'></i></a></li>
+            <li><a href="about.html"><i class='bx bxs-user'></i></a></li>
+            <li><a href="Services.html"><i class='bx bxs-grid-alt'></i></a></li>
+            <li><a href="works.html"><i class='bx bx-library'></i></a></li>
+            <li><a href="contact.html"><i class='bx bxs-envelope'></i></a></li>
+        </ul>
+    </section>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        const sr = ScrollReveal ({
+            distance:'40px',
+            duration:2500,
+            reset:true
+        });
+
+        sr.reveal('.logo',{delay:100, origin:'left'})
+        sr.reveal('.navbar',{delay:400, origin:'top'})
+        sr.reveal('.home-text h1',{delay:680, origin:'left'})
+        sr.reveal('.home-text p',{delay:750, origin:'right'})
+        sr.reveal('.main-btn',{delay:860, origin:'bottom'})
+        sr.reveal('.menu-left',{delay:860, origin:'right'})
+        sr.reveal('.home-img',{delay:1000, origin:'bottom'})
+
+        sr.reveal('.container .form',{delay:800, origin:'bottom'})
+        sr.reveal('.container h1',{delay:800, origin:'top'})
+
+
+    </script>
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
+
+
